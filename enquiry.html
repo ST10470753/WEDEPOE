@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enquiry - Hope Horizon Community Shelter</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navigation Menu -->
+  <header>
+    <div class="container nav-wrapper">
+      <a href="index.html" class="logo"><span>🌅</span> Hope Horizon</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="enquiry.html" class="active">Enquiry</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <div class="page-header">
+    <div class="container">
+      <h1>Volunteer & Sponsorship Enquiry</h1>
+      <p>Submit an enquiry to join our volunteer team or become an official donor/sponsor.</p>
+    </div>
+  </div>
+
+  <section class="container" style="max-width: 700px;">
+    <div id="enquiry-alert" class="alert">Thank you! Your enquiry has been received. Our team will contact you shortly.</div>
+
+    <form onsubmit="handleSubmit(event)" class="card">
+      <div class="form-group">
+        <label for="enquiry-type">Enquiry Type</label>
+        <select id="enquiry-type" required>
+          <option value="">Select an option...</option>
+          <option value="volunteer">Become a Volunteer</option>
+          <option value="sponsor">Become a Corporate Sponsor / Donor</option>
+          <option value="general">General Program Enquiry</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="full-name">Full Name / Organisation Name</label>
+        <input type="text" id="full-name" required placeholder="Enter your full name or company name">
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" required placeholder="name@example.com">
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" required placeholder="+27 82 123 4567">
+      </div>
+
+      <div class="form-group">
+        <label for="message">Enquiry Details</label>
+        <textarea id="message" rows="5" required placeholder="Please describe how you would like to support or collaborate..."></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Enquiry</button>
+    </form>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="copyright">&copy; 2026 Hope Horizon Community Shelter. All Rights Reserved.</div>
+    </div>
+  </footer>
+
+  <script>
+    function handleSubmit(event) {
+      event.preventDefault();
+      document.getElementById('enquiry-alert').style.display = 'block';
+      event.target.reset();
+      setTimeout(() => {
+        document.getElementById('enquiry-alert').style.display = 'none';
+      }, 4000);
+    }
+  </script>
+</body>
+</html>
