@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Hope Horizon Community Shelter</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navigation Menu -->
+  <header>
+    <div class="container nav-wrapper">
+      <a href="index.html" class="logo"><span>🌅</span> Hope Horizon</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="enquiry.html">Enquiry</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <div class="page-header">
+    <div class="container">
+      <h1>Contact Our Shelters</h1>
+      <p>Reach out to our main branch or regional shelter locations.</p>
+    </div>
+  </div>
+
+  <section class="container">
+    <!-- Multiple Locations Requirement -->
+    <h2 style="text-align: center; color: var(--primary-navy); margin-bottom: 25px;">Our Shelter Facilities</h2>
+    
+    <div class="grid-3" style="margin-bottom: 40px;">
+      <!-- Location 1 -->
+      <div class="card">
+        <h3>1. Pietermaritzburg (Main Branch)</h3>
+        <p><strong>Address:</strong> 123 Community Way, Pietermaritzburg, 3201</p>
+        <p><strong>Phone:</strong> +27 (033) 555-0192</p>
+        <p><strong>Email:</strong> pmb@hopehorizon.org.za</p>
+      </div>
+
+      <!-- Location 2 -->
+      <div class="card">
+        <h3>2. Durban Outreach Centre</h3>
+        <p><strong>Address:</strong> 45 Coastal Road, Central Durban, 4001</p>
+        <p><strong>Phone:</strong> +27 (031) 444-0811</p>
+        <p><strong>Email:</strong> durban@hopehorizon.org.za</p>
+      </div>
+    </div>
+
+    <!-- Embedded Map Representation -->
+    <div class="card" style="margin-bottom: 40px; text-align: center;">
+      <h3>Interactive Map Overview</h3>
+      <p style="margin-bottom: 15px; color: var(--text-light);">Map location for Pietermaritzburg & Durban Centers</p>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d110753.88293966555!2d30.315701!3d-29.600607!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ef6bd3914a87e2b%3A0x6a2185bc03936a28!2sPietermaritzburg!5e0!3m2!1sen!2sza!4v1710000000000" width="100%" height="250" style="border:0; border-radius: 6px;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+
+    <!-- Contact Form -->
+    <div style="max-width: 700px; margin: 0 auto;">
+      <h2 style="text-align: center; color: var(--primary-navy); margin-bottom: 20px;">Send a Direct Message</h2>
+      <div id="contact-alert" class="alert">Your message has been sent successfully!</div>
+
+      <form onsubmit="handleContactSubmit(event)" class="card">
+        <div class="form-group">
+          <label for="c-name">Full Name</label>
+          <input type="text" id="c-name" required placeholder="Your Name">
+        </div>
+        <div class="form-group">
+          <label for="c-email">Email Address</label>
+          <input type="email" id="c-email" required placeholder="name@example.com">
+        </div>
+        <div class="form-group">
+          <label for="c-subject">Subject</label>
+          <input type="text" id="c-subject" required placeholder="Subject line">
+        </div>
+        <div class="form-group">
+          <label for="c-message">Message</label>
+          <textarea id="c-message" rows="4" required placeholder="Write your message here..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-secondary" style="width: 100%;">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="copyright">&copy; 2026 Hope Horizon Community Shelter. All Rights Reserved.</div>
+    </div>
+  </footer>
+
+  <script>
+    function handleContactSubmit(event) {
+      event.preventDefault();
+      document.getElementById('contact-alert').style.display = 'block';
+      event.target.reset();
+      setTimeout(() => {
+        document.getElementById('contact-alert').style.display = 'none';
+      }, 4000);
+    }
+  </script>
+</body>
+</html>
