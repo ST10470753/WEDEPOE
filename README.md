@@ -65,7 +65,7 @@ Hope Horizon Community Shelter is a non-profit organization (NPO) platform desig
 
 ---
 
-## Academic References & Technical Credits
+## References
 
 1. **Leaflet.js Mapping Library:**  
    Agafonkin, V. (2024). *Leaflet: An open-source JavaScript library for mobile-friendly interactive maps*. Available at: https://leafletjs.com/ (Accessed: 9 November 2026).
