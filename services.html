@@ -37,27 +37,27 @@
 
   <section class="container">
     <div class="grid-3">
-      <div class="card" style="border-left: 4px solid var(--secondary-amber);">
+      <div class="card service-item" style="border-left: 4px solid var(--secondary-amber);">
         <h3>Temporary Overnight Accommodation</h3>
         <p>Safe, clean, climate-controlled beds equipped with secure storage, private shower amenities, and basic personal hygiene kits for men and women.</p>
       </div>
-      <div class="card" style="border-left: 4px solid var(--secondary-amber);">
+      <div class="card service-item" style="border-left: 4px solid var(--secondary-amber);">
         <h3>Community Kitchen & Food Parcels</h3>
         <p>Daily hot meals served three times a day. We also distribute weekly essential food packages to vulnerable local families in need.</p>
       </div>
-      <div class="card" style="border-left: 4px solid var(--secondary-amber);">
+      <div class="card service-item" style="border-left: 4px solid var(--secondary-amber);">
         <h3>Vocational Skills Workshops</h3>
         <p>Practical practical skill development including resume preparation, basic computer literacy, woodworking, and interview readiness training.</p>
       </div>
-      <div class="card" style="border-left: 4px solid var(--secondary-amber);">
+      <div class="card service-item" style="border-left: 4px solid var(--secondary-amber);">
         <h3>Social Work & Rehabilitation Counselling</h3>
         <p>On-site professional social workers who assist clients with ID document assistance, addiction recovery support, and social grant processing.</p>
       </div>
-      <div class="card" style="border-left: 4px solid var(--secondary-amber);">
+      <div class="card service-item" style="border-left: 4px solid var(--secondary-amber);">
         <h3>Healthcare Screening & Referral</h3>
         <p>Bi-weekly health checkups hosted in partnership with mobile health clinics to address immediate medical care requirements.</p>
       </div>
-      <div class="card" style="border-left: 4px solid var(--secondary-amber);">
+      <div class="card service-item" style="border-left: 4px solid var(--secondary-amber);">
         <h3>Transitional Housing Placement</h3>
         <p>Graduation support helping clients transition from short-term shelter into stable, long-term independent housing solutions.</p>
       </div>
@@ -111,7 +111,7 @@
 // Real-time Search Filter Function
     function filterServices() {
       let input = document.getElementById('serviceSearch').value.toLowerCase();
-      let cards = document.getElementsByClassName('service-card');
+      let cards = document.getElementsByClassName('service-item');
       
       for (let i = 0; i < cards.length; i++) {
         let text = cards[i].innerText.toLowerCase();
