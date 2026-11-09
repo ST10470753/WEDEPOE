@@ -29,6 +29,12 @@
     </div>
   </div>
 
+<section class="container">
+    <!-- Search Bar Feature -->
+    <div style="max-width: 450px; margin: 0 auto 30px auto;">
+      <input type="text" id="serviceSearch" onkeyup="filterServices()" placeholder="Search services (e.g., Kitchen, Housing)..." style="width: 100%; padding: 12px; border: 1px solid var(--border-color); border-radius: 6px; font-size: 1rem;">
+    </div>
+
   <section class="container">
     <div class="grid-3">
       <div class="card" style="border-left: 4px solid var(--secondary-amber);">
@@ -101,6 +107,22 @@
 
   <!-- JavaScript Handler for Lightbox -->
   <script>
+
+// Real-time Search Filter Function
+    function filterServices() {
+      let input = document.getElementById('serviceSearch').value.toLowerCase();
+      let cards = document.getElementsByClassName('service-card');
+      
+      for (let i = 0; i < cards.length; i++) {
+        let text = cards[i].innerText.toLowerCase();
+        if (text.includes(input)) {
+          cards[i].style.display = "";
+        } else {
+          cards[i].style.display = "none";
+        }
+      }
+    }
+
     function openImageLightbox(imageSrc) {
       const lightbox = document.getElementById('imageLightbox');
       const targetImg = document.getElementById('lightboxTarget');
