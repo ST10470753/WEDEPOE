@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore Hope Horizon's community services including emergency housing, meal programs, and vocational training.">
   <title>Services - Hope Horizon Community Shelter</title>
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -57,11 +58,60 @@
     </div>
   </section>
 
+  <!-- ==========================================
+       ADDED: Local Image Gallery Section
+     ========================================== -->
+  <section class="container">
+    <h2 style="text-align: center; color: var(--primary-navy); margin-bottom: 10px;">Shelter Photo Gallery</h2>
+    <p style="text-align: center; color: var(--text-light); margin-bottom: 20px;">Click any image to expand in lightbox view.</p>
+
+    <div class="gallery-grid">
+      <!-- Image 1 -->
+      <img src="images/shelter1.jpg" 
+           alt="Community Meal Program" 
+           class="gallery-item" 
+           onclick="openImageLightbox(this.src)">
+
+      <!-- Image 2 -->
+      <img src="images/shelter2.jpg" 
+           alt="Emergency Shelter Facilities" 
+           class="gallery-item" 
+           onclick="openImageLightbox(this.src)">
+
+      <!-- Image 3 -->
+      <img src="images/shelter3.jpg" 
+           alt="Vocational Workshop" 
+           class="gallery-item" 
+           onclick="openImageLightbox(this.src)">
+    </div>
+  </section>
+
+  <!-- Lightbox Modal Popup -->
+  <div id="imageLightbox" class="lightbox" onclick="closeImageLightbox()">
+    <span class="close-lightbox">&times;</span>
+    <img id="lightboxTarget" class="lightbox-img" src="" alt="Enlarged View">
+  </div>
+
   <!-- Footer -->
   <footer>
     <div class="container">
       <div class="copyright">&copy; 2026 Hope Horizon Community Shelter. All Rights Reserved.</div>
     </div>
   </footer>
+
+  <!-- JavaScript Handler for Lightbox -->
+  <script>
+    function openImageLightbox(imageSrc) {
+      const lightbox = document.getElementById('imageLightbox');
+      const targetImg = document.getElementById('lightboxTarget');
+      
+      targetImg.src = imageSrc;
+      lightbox.style.display = 'flex';
+    }
+
+    function closeImageLightbox() {
+      document.getElementById('imageLightbox').style.display = 'none';
+    }
+  </script>
 </body>
 </html>
